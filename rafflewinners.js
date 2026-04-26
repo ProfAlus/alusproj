@@ -115,6 +115,7 @@ if (rafflePool.length === 0) {
     }
 
     // Optional: send a notification (placeholder)
+    // In a real application, you would integrate with an email service here.
     /* function sendEmail(to, subject, message) {
       console.log(`Sending email to ${to}`);
       console.log(`Subject: ${subject}`);
