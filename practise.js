@@ -393,7 +393,6 @@ console.log(favouriteFruits); // This will print the updated favouriteFruits arr
 
 favouriteFruits.splice(1, 1); // This will remove the element at index 1 of the favouriteFruits array, which is "Grapes".
 console.log(favouriteFruits); // This will print the updated favouriteFruits array to the console, which will no longer include "Grapes".
-*/
 
 let arrNames = ["Alusine", "Joel", "Joseph", "Moses", "Sulaiman"];
 
