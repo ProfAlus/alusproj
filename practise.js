@@ -371,8 +371,7 @@ for (let fruit of fruits) {
 }
 */
 
-//Array methods
-
+/*
 let favouriteFruits = ["Apple", "Mango", "Pineapple", "Orange"];
 favouriteFruits.push("Banana"); // This will add "Banana" to the end of the favouriteFruits array.
 console.log(favouriteFruits); // This will print the updated favouriteFruits array to the console, which will now include "Banana" at the end.
@@ -393,7 +392,9 @@ console.log(favouriteFruits); // This will print the updated favouriteFruits arr
 
 favouriteFruits.splice(1, 1); // This will remove the element at index 1 of the favouriteFruits array, which is "Grapes".
 console.log(favouriteFruits); // This will print the updated favouriteFruits array to the console, which will no longer include "Grapes".
+*/
 
+/*
 let arrNames = ["Alusine", "Joel", "Joseph", "Moses", "Sulaiman"];
 
 let removedArr = arrNames.splice(3, 1); // Removes the element at index 2 (Joseph) and returns it
@@ -403,3 +404,13 @@ for (let name of arrNames) {
   console.log(name);
 }
 console.log(`${removedArr} has been removed from our database`); // This will print the removed element to the console, which is "Sulaiman".
+
+*/
+
+//map method - The map method is a built-in array method in JavaScript that creates a new array by applying a provided function to each element of the original array. It takes a callback function as an argument, which is executed for each element in the array, and returns a new array containing the results of calling the callback function on each element.
+
+let numbers = [1, 2, 3, 4, 5];
+console.log(numbers); // This will print the original numbers array to the console, which is [1, 2, 3, 4, 5].
+
+let squaredNumbers = numbers.map((num) => num * num); // This will create a new array called squaredNumbers, where each element is the square of the corresponding element in the numbers array. The map method takes a callback function that takes each element (num) from the numbers array, multiplies it by itself (num * num), and returns the result. The resulting array will be [1, 4, 9, 16, 25].
+console.log(squaredNumbers); // This will print the squaredNumbers array to the console, which is [1, 4, 9, 16, 25].
