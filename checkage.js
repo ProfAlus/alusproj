@@ -1,3 +1,4 @@
+//A program to check the ages of participants and determine eligibility for a certain activity (e.g., voting, driving, etc.)
 let participants = [
   { name: "Alice", age: 25 },
   { name: "Bob", age: 17 },
@@ -23,7 +24,7 @@ let ineligibleAges = ages.filter((age) => !isEligible(age));
 console.log("\nIneligible participants:");
 ineligibleAges.forEach((age) => {
   let participant = participants.find((p) => p.age === age);
-  console.log(`${participant.name} - age ${participant.age} years`);
+  console.log(
+    `${participant.name} - age ${participant.age} years. Reason: ${age < 18 ? "Too young" : "Too old"}`,
+  );
 });
-
-
