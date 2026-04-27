@@ -1,12 +1,12 @@
 //A program to check the ages of participants and determine eligibility for a certain activity (e.g., voting, driving, etc.)
 let participants = [
-  { name: "Alice", age: 25 },
-  { name: "Bob", age: 17 },
-  { name: "Charlie", age: 30 },
-  { name: "David", age: 70 },
-  { name: "Eve", age: 22 },
-  { name: "Frank", age: 15 },
-  { name: "Grace", age: 40 },
+  { name: "Alice", gender: "Female", age: 25 },
+  { name: "Bob", gender: "Male", age: 17 },
+  { name: "Charlie", gender: "Male", age: 30 },
+  { name: "David", gender: "Male", age: 70 },
+  { name: "Eve", gender: "Female", age: 22 },
+  { name: "Frank", gender: "Male", age: 15 },
+  { name: "Grace", gender: "Female", age: 40 },
 ];
 
 let ages = participants.map((p) => p.age);
@@ -25,6 +25,6 @@ console.log("\nIneligible participants:");
 ineligibleAges.forEach((age) => {
   let participant = participants.find((p) => p.age === age);
   console.log(
-    `${participant.name} - age ${participant.age} years. Reason: ${age < 18 ? "Too young" : "Too old"}`,
+    `${participant.name} - age ${participant.age} years. Reason: ${participant.gender === "Male" ? "He is" : "She is"} ${age < 18 ? "too young to drive" : "too old to drive"}`,
   );
 });
