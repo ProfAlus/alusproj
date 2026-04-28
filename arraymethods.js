@@ -99,6 +99,7 @@ arrDim.forEach((row, rowIndex) => {
 });
 */
 
+/*
 //loop through the two-dimensional array using for loop
 // The outer for loop - for (let i = 0; i < arrDim.length; i++)  - This will loop through each row of the two-dimensional array arrDim using a for loop. The variable i will represent the index of the current row being processed.
 //The inner for loop - for (let j = 0; j < arrDim[i].length; j++) - This will loop through each column of the current row (arrDim[i]) using another for loop. The variable j will represent the index of the current column being processed within that row.
@@ -108,6 +109,7 @@ for (let i = 0; i < arrDim.length; i++) {
     console.log(`Element at row ${i}, column ${j}: ${arrDim[i][j]}`);
   }
 }
+*/
 
 //Multidimensional array (3D array)
 let arr3D = [
@@ -122,3 +124,13 @@ let arr3D = [
     [70, 75, 85],
   ],
 ]; //This is a three-dimensional array called arr3D. It consists of two main elements, each of which is a two-dimensional array. Each of those two-dimensional arrays contains three inner arrays, which represent rows of data. Each inner array contains three numerical values. The structure of arr3D can be visualized as a cube of data, where you have multiple layers (the two main elements), and within each layer, you have rows and columns of values.
+
+for (let i = 0; i < arr3D.length; i++) {
+  for (let j = 0; j < arr3D[i].length; j++) {
+    for (let k = 0; k < arr3D[i][j].length; k++) {
+      console.log(
+        `Element at layer ${i}, row ${j}, column ${k}: ${arr3D[i][j][k]}`,
+      );
+    }
+  }
+} //This code will loop through the three-dimensional array arr3D using nested for loops. The outer loop (i) iterates through each layer of the array, the middle loop (j) iterates through each row within the current layer, and the innermost loop (k) iterates through each column within the current row. The console.log statement will print the value of each element in the three-dimensional array along with its corresponding layer, row, and column indices.
