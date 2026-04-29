@@ -111,6 +111,7 @@ for (let i = 0; i < arrDim.length; i++) {
 }
 */
 
+/*
 //Multidimensional array (3D array)
 let arr3D = [
   [
@@ -134,3 +135,23 @@ for (let i = 0; i < arr3D.length; i++) {
     }
   }
 } //This code will loop through the three-dimensional array arr3D using nested for loops. The outer loop (i) iterates through each layer of the array, the middle loop (j) iterates through each row within the current layer, and the innermost loop (k) iterates through each column within the current row. The console.log statement will print the value of each element in the three-dimensional array along with its corresponding layer, row, and column indices.
+
+*/
+
+//shallow copy and deep copy of an array
+let originalArray = [1, 2, 3, 4, 5];
+console.log("Original array:", originalArray);
+let shallowCopy = originalArray; //This creates a shallow copy of the original array by assigning it to a new variable called shallowCopy. However, since arrays are reference types in JavaScript, both originalArray and shallowCopy point to the same underlying array in memory. This means that any changes made to either originalArray or shallowCopy will affect both variables, as they reference the same array. After this operation, both originalArray and shallowCopy will contain the same numbers [1, 2, 3, 4, 5], but they are not separate arrays in memory; they are references to the same array. Therefore, if you modify shallowCopy (e.g., by adding or removing elements), it will also modify originalArray, and vice versa.
+
+console.log("Shallow copy:", shallowCopy);
+
+let deepCopy = [...originalArray]; //This creates a deep copy of the original array by using the spread operator (...). The spread operator takes all the elements of originalArray and creates a new array with those same elements. This means that deepCopy is a completely separate array from originalArray, and changes made to deepCopy will not affect originalArray, and vice versa. After this operation, deepCopy will contain the same numbers as originalArray at the time of copying, but it will be a different array in memory.
+console.log("Deep copy:", deepCopy); //This will print the deep copy of the original array to the console, which should be [1, 2, 3, 4, 5].
+
+originalArray.push(6); //This will add the number 6 to the end of the array that both originalArray and shallowCopy reference. Since they point to the same array, this change will be reflected in both variables.
+
+console.log("Original array after modification:", originalArray); //This will print the modified original array, which now includes the number 6, resulting in [1, 2, 3, 4, 5, 6].
+
+console.log("Shallow copy after modification:", shallowCopy); //This will print the shallow copy of the original array, which will also reflect the change made to originalArray, resulting in [1, 2, 3, 4, 5, 6].
+
+console.log("Deep copy after modification:", deepCopy); //This will print the deep copy of the original array, which will not reflect the change made to originalArray, and will still be [1, 2, 3, 4, 5]. This demonstrates that deepCopy is a separate array from originalArray, while shallowCopy is just a reference to the same array as originalArray.
