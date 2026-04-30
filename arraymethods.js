@@ -271,17 +271,21 @@ console.log("Is the user a JavaScript Developer?", isJavaScriptDeveloper); //Thi
 */
 
 let custDetails =
-  "Joel Alusine Bangura | JOEL@gmail.com | JavaScript Developer. I love JavaScript";
+  "Joel Alusine Bangura | JOEL@gmail.com | JavaScript Developer. I love JavaScript | I love studying the Holy Bible ";
 
 let detailsParts = custDetails.split("|"); //This will split the custDetails string into an array of substrings using the pipe character (|) as the delimiter, and then trim each part to remove extra spaces. The resulting array will contain the cleaned-up parts of the customer details.
 console.log("Customer details parts:", detailsParts); //This will print the array resulting from splitting the custDetails string, with each part trimmed of extra spaces using the trim method. The output will show the cleaned-up parts of the customer details.
 
 let custName = detailsParts[0].trim(); //This will extract the first element of the detailsParts array (which is the customer's name) and trim it to remove any leading or trailing spaces, storing the result in the variable cName.
-let custEmail = detailsParts[1].trim(); //This will extract the second element of the detailsParts array (which is the customer's email) and trim it to remove any leading or trailing spaces, storing the result in the variable cEmail.
+let custEmail = detailsParts[1].trim().toLowerCase(); //This will extract the second element of the detailsParts array (which is the customer's email) and trim it to remove any leading or trailing spaces, storing the result in the variable cEmail.
 let custProfession = detailsParts[2].trim(); //This will extract the third element of the detailsParts array (which is the customer's profession) and trim it to remove any leading or trailing spaces, storing the result in the variable cProfession.
+
+customerLikes = detailsParts[3].trim();
+
 console.log("Customer name:", custName);
 console.log("Customer email:", custEmail.toLowerCase()); //This will print the customer's email in lowercase to the console, demonstrating how to manipulate string data after splitting it into parts.
 console.log("Customer profession:", custProfession);
+console.log("Customer Hobby:", customerLikes);
 
 custProfession.includes("JavaScript Developer")
   ? console.log("The customer is a JavaScript Developer.")
@@ -300,3 +304,35 @@ console.log(
 custProfession = custProfession.replaceAll("JavaScript", "Python");
 
 console.log(custProfession);
+
+//How to get the customer's profession
+
+console.log(custProfession.slice(0, custProfession.indexOf("I")).trim());
+
+//Email validation - Checking if an email is valid or not
+let myEmail = "email@gamil.comj";
+
+validEmail = myEmail.includes("@") && myEmail.endsWith(".com");
+console.log(
+  "Is this a valid email?",
+  validEmail
+    ? `Yes, this is the email -> ${myEmail}`
+    : `No, this is the email -> ${myEmail}`,
+);
+
+//Template literals
+
+let dashSeperator = "-".repeat(60); //to add 60 dashes whereever it is called
+let userProfile = `
+${dashSeperator}
+
+ User Profile:
+
+ Customer Name       : ${custName};
+ Customer Email      : ${custEmail};
+ Customer Profession : ${custProfession}
+ Customer's Hobby    : ${customerLikes}
+ 
+ ${dashSeperator}
+ `;
+console.log(userProfile);
