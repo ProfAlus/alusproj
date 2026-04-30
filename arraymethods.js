@@ -286,3 +286,17 @@ console.log("Customer profession:", custProfession);
 custProfession.includes("JavaScript Developer")
   ? console.log("The customer is a JavaScript Developer.")
   : console.log("The customer is not a JavaScript Developer."); //This will check if the string "JavaScript Developer" is included in the custProfession variable. If it is, it will print "The customer is a JavaScript Developer." Otherwise, it will print "The customer is not a JavaScript Developer." This demonstrates how to use the includes method to check for the presence of a substring within a string.
+
+//IndexOf and lastIndexOf methods
+console.log(
+  "The first index or occurence of the customer's profession is:",
+  custProfession.indexOf("JavaScript"),
+);
+console.log(
+  "The the last index or last occurence of the customer's profession is:",
+  custProfession.lastIndexOf("JavaScript"),
+);
+
+custProfession = custProfession.replaceAll("JavaScript", "Python");
+
+console.log(custProfession);
