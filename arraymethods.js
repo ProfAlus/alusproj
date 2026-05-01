@@ -270,6 +270,7 @@ let isJavaScriptDeveloper = finalParts.includes("JavaScript Developer"); //This 
 console.log("Is the user a JavaScript Developer?", isJavaScriptDeveloper); //This will print whether the user is a JavaScript Developer based on the presence of the string "JavaScript Developer" in the finalParts array. It uses a ternary operator to print "Yes" if isJavaScriptDeveloper is true, and "No" if it is false.
 */
 
+/*
 let custDetails =
   "Joel Alusine Bangura | JOEL@gmail.com | JavaScript Developer. I love JavaScript | I love studying the Holy Bible ";
 
@@ -336,3 +337,91 @@ ${dashSeperator}
  ${dashSeperator}
  `;
 console.log(userProfile);
+
+*/
+
+/*
+//Synchronous and asynchronous
+function task1() {
+  console.log("Task1 started...");
+
+  let started = Date.now();
+  let delay = 5000;
+  let end = started + delay;
+  console.log("Task1 is excuting...");
+
+  while (Date.now() <= end) {}
+  console.log("Task1 is completed!");
+}
+
+function task2() {
+  console.log("Task2 started...");
+
+  let started = Date.now();
+  let delay = 3000;
+  let end = started + delay;
+  console.log("Task2 is excuting...");
+
+  while (Date.now() <= end) {}
+  console.log("Task2 is completed!");
+}
+
+function task3() {
+  console.log("Task3 started...");
+
+  let started = Date.now();
+  let delay = 6000;
+  let end = started + delay;
+  console.log("Task3 is excuting...");
+
+  while (Date.now() <= end) {}
+  console.log("Task3 is completed!");
+}
+
+task1();
+task2();
+task3();
+*/
+
+/*
+//Synchronous
+function fetchCourseProgress() {
+  console.log("Fetching course progress has started");
+
+  let started = Date.now();
+  let delay = 5000;
+  let end = started + delay;
+
+  while (Date.now() <= end) {}
+  console.log("Fetching course progress has completed!");
+}
+
+function fetchLeaderBoard() {
+  console.log("Fetching Leaderboard started...");
+
+  let started = Date.now();
+  let delay = 3000;
+  let end = started + delay;
+
+  while (Date.now() <= end) {}
+  console.log("Leaderboard loaded successfully!");
+}
+
+function fetchingImages() {
+  console.log("Fetching images started...");
+
+  let started = Date.now();
+  let delay = 6000;
+  let end = started + delay;
+
+  while (Date.now() <= end) {}
+  console.log("Fetching images completed!");
+}
+
+console.log("Dashboard loading started");
+fetchCourseProgress();
+fetchLeaderBoard();
+fetchingImages();
+
+*/
+
