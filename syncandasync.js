@@ -1,6 +1,5 @@
-
 //Template literals
-
+/*
 let dashSeperator = "-".repeat(60); //to add 60 dashes whereever it is called
 let userProfile = `
 ${dashSeperator}
