@@ -12,6 +12,8 @@ console.log(
 
 */
 
+// const { promises } = require("nodemailer/lib/xoauth2");
+
 /*
 //A program to check the ages to determine eligibility for a certain activity (e.g., voting, driving, etc.)
 let ages = [32, 15, 19, 12];
@@ -270,7 +272,7 @@ let isJavaScriptDeveloper = finalParts.includes("JavaScript Developer"); //This 
 console.log("Is the user a JavaScript Developer?", isJavaScriptDeveloper); //This will print whether the user is a JavaScript Developer based on the presence of the string "JavaScript Developer" in the finalParts array. It uses a ternary operator to print "Yes" if isJavaScriptDeveloper is true, and "No" if it is false.
 */
 
-/*
+
 let custDetails =
   "Joel Alusine Bangura | JOEL@gmail.com | JavaScript Developer. I love JavaScript | I love studying the Holy Bible ";
 
@@ -320,108 +322,3 @@ console.log(
     ? `Yes, this is the email -> ${myEmail}`
     : `No, this is the email -> ${myEmail}`,
 );
-
-//Template literals
-
-let dashSeperator = "-".repeat(60); //to add 60 dashes whereever it is called
-let userProfile = `
-${dashSeperator}
-
- User Profile:
-
- Customer Name       : ${custName};
- Customer Email      : ${custEmail};
- Customer Profession : ${custProfession}
- Customer's Hobby    : ${customerLikes}
- 
- ${dashSeperator}
- `;
-console.log(userProfile);
-
-*/
-
-/*
-//Synchronous and asynchronous
-function task1() {
-  console.log("Task1 started...");
-
-  let started = Date.now();
-  let delay = 5000;
-  let end = started + delay;
-  console.log("Task1 is excuting...");
-
-  while (Date.now() <= end) {}
-  console.log("Task1 is completed!");
-}
-
-function task2() {
-  console.log("Task2 started...");
-
-  let started = Date.now();
-  let delay = 3000;
-  let end = started + delay;
-  console.log("Task2 is excuting...");
-
-  while (Date.now() <= end) {}
-  console.log("Task2 is completed!");
-}
-
-function task3() {
-  console.log("Task3 started...");
-
-  let started = Date.now();
-  let delay = 6000;
-  let end = started + delay;
-  console.log("Task3 is excuting...");
-
-  while (Date.now() <= end) {}
-  console.log("Task3 is completed!");
-}
-
-task1();
-task2();
-task3();
-*/
-
-/*
-//Synchronous
-function fetchCourseProgress() {
-  console.log("Fetching course progress has started");
-
-  let started = Date.now();
-  let delay = 5000;
-  let end = started + delay;
-
-  while (Date.now() <= end) {}
-  console.log("Fetching course progress has completed!");
-}
-
-function fetchLeaderBoard() {
-  console.log("Fetching Leaderboard started...");
-
-  let started = Date.now();
-  let delay = 3000;
-  let end = started + delay;
-
-  while (Date.now() <= end) {}
-  console.log("Leaderboard loaded successfully!");
-}
-
-function fetchingImages() {
-  console.log("Fetching images started...");
-
-  let started = Date.now();
-  let delay = 6000;
-  let end = started + delay;
-
-  while (Date.now() <= end) {}
-  console.log("Fetching images completed!");
-}
-
-console.log("Dashboard loading started");
-fetchCourseProgress();
-fetchLeaderBoard();
-fetchingImages();
-
-*/
-
