@@ -34,10 +34,11 @@ fetch("https://catfact.ninja/fact")
 
 async function getCatFact() {
   try {
-    const catFactData = await fetch("https://catfact.ninja/fact");
+    // const catFactData = await fetch("https://catfact.ninja/fact");
+    const catFactData = await fetch("https://careers.sl/wp-json/wp/v2/candidate");
     // console.log(catFactData); //this will print the raw bytes
-    const data = await catFactData.json(); //Converting the raw bytes to JavaScript object
-    console.log(data);
+    const txt = await catFactData.json(); //Converting the raw bytes to JavaScript object/readable text
+    console.log(txt);
   } catch (error) {
     console.log("API failed");
   }
