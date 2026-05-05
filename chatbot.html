@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+  <head>
+    <title>React Basics</title>
+  </head>
+  <body>
+    <div class="js-container"></div>
+
+    <script src="/react-basics.js"></script>
+    <script src="https://unpkg.com/supersimpledev/react.js"></script>
+    <script src="https://unpkg.com/supersimpledev/react-dom.js"></script>
+
+    <script src="https://unpkg.com/supersimpledev/babel.js"></script>
+    <script type="text/babel">
+      //ChatBot
+
+      function ChatInput() {
+        return (
+          <>
+            <input placeholder="Send a message to Chatbot" size="30" />
+            <button>Send</button>
+          </>
+        );
+      }
+
+      function ChatMessage({ message, sender }) {
+        //const dynamicMessage = props.message; //props make our components reusable
+        //const knowSender = props.sender;
+
+        //more efficient ways to write props
+        // const { message, sender } = props;//We can even pass it as parameters in the ChatMessage() function like this - ChatMessage({ message, sender } ){}
+
+        if (sender === "robot") {
+          return (
+            <div>
+              <img src="Assets/images/robot.png" width="20" />
+              {message}
+            </div>
+          );
+        } else {
+          return (
+            //I used a div because it is a block element that will take an entire line
+            <div>
+              {message}
+              <img src="Assets/images/user.png" width="20" />
+            </div>
+          );
+        }
+      }
+
+      const app = (
+        <>
+          <ChatInput />
+          <ChatMessage message=" hello chatbot" sender="user" />
+          <ChatMessage message="Hello! How can I help you?" sender="robot" />
+          <ChatMessage message="Can you get me today's date?" sender="user" />
+          <ChatMessage message="Today is May 4" sender="robot" />
+          <ChatMessage message="Thank you" sender="user" />
+          <ChatMessage
+            message="No problem! Let me know if you need help with anything else!"
+            sender="robot"
+          />
+        </>
+      );
+
+      const myContainer = document.querySelector(".js-container");
+
+      ReactDOM.createRoot(myContainer).render(app);
+    </script>
+  </body>
+</html>
